@@ -28,12 +28,13 @@ def w_to_f arr
 end
 
 def w_to_c arr
-	output = File.open './public/contacts.txt', 'a'
+	output = File.open './public/contacts.txt','a'
 	output.write "start=========#{arr[0]}==============\n"
 	output.write "#{arr[1]}\n"
 	output.write "end===========#{arr[0]}==============\n"
 	output.close
 end	
+
 
 post '/visit' do
 	@user_name = params[:username].strip.capitalize
